@@ -1,0 +1,51 @@
+:imagesdir: images
+
+= Setup
+
+=== Get your AWS SSH Key
+
+Browse to this website to download your SSH Key:
+
+[source]
+----
+student.<your-student-number>.redhat-fierce.io
+----
+
+image::student-login.png[]
+
+=== SSH to Your EC2 Instance
+
+
+==== Windows
+
+To configure `Putty` to connect to your AWS AMI link:http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html[check here].
+
+==== Linux & macOS
+
+To configure `ssh` to connect to your AWS AMI, download the ssh key file to your Downloads folder:
+
+.ssh keys
+[source]
+----
+~/Downloads/container.pem
+----
+
+Change permissions on the ssh keys.
+
+.chmod
+[source]
+----
+$ chmod 0400 ~/Downloads/container.pem
+----
+
+SSH to your instance, where student `n` equals your assigned number (e.g. student-12).
+
+.ssh
+[source]
+----
+$ ssh-agent bash
+$ ssh-add ~/Downloads/container.pem
+$ ssh ec2-user@student.n.redhat-fierce.io
+----
+
+image::redhat.svg['Red Hat']

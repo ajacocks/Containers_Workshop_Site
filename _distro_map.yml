@@ -1,0 +1,14 @@
+---
+
+red-hat-public-sector:
+  name: Container Workshop
+  author: Documentation Project <bsollar@redhat.com>
+  site: container workshop
+  site_name: Container Workshop
+  site_url: https://docs.redhatgov.io/
+  branches:
+    master:
+      name: 'latest'
+      dir: 'latest'
+
+
